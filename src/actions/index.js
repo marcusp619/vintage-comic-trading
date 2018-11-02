@@ -8,9 +8,9 @@ export const hasErrored = bool => ({
   hasErrored: bool,
 });
 
-export const comicFetchDataSuccess = comics => ({
+export const comicFetchDataSuccess = comic => ({
   type: 'COMICS_FETCH_DATA_SUCCESS',
-  comics,
+  comic,
 });
 
 export const addComicToUser = comic => ({
