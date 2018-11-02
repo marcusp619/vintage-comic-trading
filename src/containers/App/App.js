@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchComic} from '../../utils/API';
-import {comicFetchDataSuccess} from '../../actions';
+//import {fetchCharacter} from '../../utils/API';
+//import {comicFetchDataSuccess} from '../../actions';
+import {fetchComics} from '../../thunks/fetchComic' 
 import './App.css';
 
-class App extends Component {
-  componentDidMount() {
-    fetchComic();
+export class App extends Component {
+ async componentDidMount() {
+    const character = await this.props.fetchComic();
+    console.log(character)
   }
 
   render() {
@@ -18,15 +20,15 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {comic: state.comicsReducer};
-};
+export const mapStateToProps = state => ({
+  comics: state.comics,
+  isLoading: state.loading,
+  hasErrored: state.hasErrored,
+});
 
-const mapDispatchToProps = dispatch => {
+export const mapDispatchToProps = dispatch => {
   return {
-    addComic: comic => {
-      dispatch(comicFetchDataSuccess(comic));
-    },
+    fetchComic: () => dispatch(fetchComics())
   };
 };
 
