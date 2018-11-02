@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {fetchComic} from '../../util/';
+import {connect} from 'react-redux';
+import {fetchComic} from '../../utils/API';
+import {comicFetchDataSuccess} from '../../actions';
 import './App.css';
 
 class App extends Component {
@@ -16,4 +18,19 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {comic: state.comicsReducer};
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addComic: comic => {
+      dispatch(comicFetchDataSuccess(comic));
+    },
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App);

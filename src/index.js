@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {Provider} from 'react-dom';
+import {Provider} from 'react-redux';
 import {createStore} from 'redux';
-import rootReducer from '../src/reducers';
+import rootReducer from '../src/reducers/';
 import './index.css';
-import App from './components/App';
+import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
 
 const devTools =
