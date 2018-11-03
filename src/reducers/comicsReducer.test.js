@@ -66,5 +66,21 @@ describe('comics reducer', () => {
       //expectation
       expect(result).toEqual(expected);
     })
+    
+    it('should return state with isLoading true', () => {
+      //setup
+      const expected = 'true';
+      const mockAction = {
+        type: 'IS_LOADING',
+        isLoading: 'true' 
+      }
+
+      //execution
+      const result = isLoading(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    })
+
   });
 });
