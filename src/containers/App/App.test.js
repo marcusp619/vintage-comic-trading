@@ -51,8 +51,17 @@ describe('App Container', () => {
   });
 
   describe('mapDispatchToProps', () => {
-    it.skip('calls dispatch with an comicFetchDataSuccess', () => {
-      
+    it.skip('calls dispatch with an fetchComics action when fetchcomic is called', () => {
+      //setup
+      const mockDispatch = jest.fn()
+      const actionToDispatch = fetchComics()
+
+      //execution
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.fetchComic()
+
+      //expectation
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
     })
   })
 });

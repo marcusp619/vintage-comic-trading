@@ -9,7 +9,6 @@ export class App extends Component {
   async componentDidMount() {
     try {
       const character = await this.props.fetchComic();
-      console.log(character);
     } catch (error) {
       throw Error(error.message);
     }

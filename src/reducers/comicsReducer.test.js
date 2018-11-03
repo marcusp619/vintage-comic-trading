@@ -82,7 +82,7 @@ describe('comics reducer', () => {
       expect(result).toEqual(expected);
     });
   });
-  
+
   describe('hasErrored reducer', () => {
     it('should return intial state', () => {
       //setup
