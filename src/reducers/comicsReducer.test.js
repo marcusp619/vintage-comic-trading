@@ -14,12 +14,14 @@ describe('comics reducer', () => {
 
   it('shoudl return state with new comic', () => {
     //setup
-    const expected = [{
-      id: 1009718,
-      name: 'Wolverine',
-      description:
-        "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
-    }];
+    const expected = [
+      {
+        id: 1009718,
+        name: 'Wolverine',
+        description:
+          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
+      },
+    ];
 
     const mockAction = {
       type: 'COMICS_FETCH_DATA_SUCCESS',
@@ -40,7 +42,7 @@ describe('comics reducer', () => {
 
   describe('isLoading reducer', () => {
     it('should return intial state', () => {
-      //setup 
+      //setup
       const expected = false;
 
       //execution
@@ -48,7 +50,21 @@ describe('comics reducer', () => {
 
       //expectation
       expect(result).toEqual(expected);
+    });
+
+    it('should return state with isLoading false', () => {
+      //setup
+      const expected = 'false';
+      const mockAction = {
+        type: 'IS_LOADING',
+        isLoading: 'false' 
+      }
+
+      //execution
+      const result = isLoading(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
     })
-  })
-    
+  });
 });
