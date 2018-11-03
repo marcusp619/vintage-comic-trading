@@ -16,6 +16,8 @@ const Header = () => {
   );
 };
 
+export default Header;
+
 const SignInContainer = styled.div``;
 
 const Button = styled.button`
@@ -36,9 +38,9 @@ const Button = styled.button`
 
 const HeaderContainer = styled.header`
   background: #e2d4ba;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.8);
   display: flex;
   justify-content: space-between;
   padding: 1em 0.5em;
   margin: 0 auto;
 `;
-export default Header;
