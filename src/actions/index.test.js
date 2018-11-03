@@ -11,10 +11,10 @@ describe('actions', () => {
     };
 
     //execution
-    const results = actions.isLoading(bool);
+    const result = actions.isLoading(bool);
 
     //expectation
-    expect(results).toEqual(expectedAction);
+    expect(result).toEqual(expectedAction);
   });
 
   it('should have a type of hasErrored', () => {
@@ -31,5 +31,26 @@ describe('actions', () => {
 
     //expectation
     expect(result).toEqual(expectedAction);
-  })
+  });
+
+  it('should have a type of COMICS_FETCH_DATA_SUCCESS', () => {
+    //setup
+    const comic = {
+      id: 1009718,
+      name: 'Wolverine',
+      description:
+        "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
+    };
+
+    const expectedAction = {
+      type: 'COMICS_FETCH_DATA_SUCCESS',
+      comic,
+    };
+
+    //execution
+    const result = actions.comicFetchDataSuccess(comic);
+
+    //expectation
+    expect(result).toEqual(expectedAction);
+  });
 });
