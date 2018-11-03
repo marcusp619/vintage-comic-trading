@@ -57,30 +57,72 @@ describe('comics reducer', () => {
       const expected = 'false';
       const mockAction = {
         type: 'IS_LOADING',
-        isLoading: 'false' 
-      }
+        isLoading: 'false',
+      };
 
       //execution
       const result = isLoading(undefined, mockAction);
 
       //expectation
       expect(result).toEqual(expected);
-    })
-    
+    });
+
     it('should return state with isLoading true', () => {
       //setup
       const expected = 'true';
       const mockAction = {
         type: 'IS_LOADING',
-        isLoading: 'true' 
-      }
+        isLoading: 'true',
+      };
 
       //execution
       const result = isLoading(undefined, mockAction);
 
       //expectation
       expect(result).toEqual(expected);
-    })
+    });
+  });
+  
+  describe('hasErrored reducer', () => {
+    it('should return intial state', () => {
+      //setup
+      const expected = false;
 
+      //execution
+      const result = hasErrored(undefined, '');
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
+
+    it('should return state with hasErrored false', () => {
+      //setup
+      const expected = 'false';
+      const mockAction = {
+        type: 'HAS_ERRORED',
+        hasErrored: 'false',
+      };
+
+      //execution
+      const result = hasErrored(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
+
+    it('should return state with hasErrored true', () => {
+      //setup
+      const expected = 'true';
+      const mockAction = {
+        type: 'HAS_ERRORED',
+        hasErrored: 'true',
+      };
+
+      //execution
+      const result = hasErrored(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
   });
 });
