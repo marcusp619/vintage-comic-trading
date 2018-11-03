@@ -15,9 +15,8 @@ export const fetchComics = () => {
       const response = await fetch(url);
       dispatch(isLoading(false));
       const result = await response.json();
-      console.log(result)
       dispatch(comicFetchDataSuccess(result.data.results));
-    } catch(error) {
+    } catch {
       dispatch(isLoading(false));
       dispatch(hasErrored(true));
     }

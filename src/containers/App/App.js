@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-//import {fetchCharacter} from '../../utils/API';
-//import {comicFetchDataSuccess} from '../../actions';
-import {fetchComics} from '../../thunks/fetchComic' 
-import './App.css';
+import {fetchComics} from '../../thunks/fetchComic';
+import Header from '../../components/Header/';
+import Hero from '../../components/Hero';
+import styled from 'styled-components';
 
 export class App extends Component {
- async componentDidMount() {
-    const character = await this.props.fetchComic();
-    console.log(character)
+  async componentDidMount() {
+    try {
+      const character = await this.props.fetchComic();
+      console.log(character);
+    } catch (error) {
+      throw Error(error.message);
+    }
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">Learn React</header>
-      </div>
+      <AppContainer>
+        <Header />
+        <Hero />
+      </AppContainer>
     );
   }
 }
@@ -28,7 +33,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
   return {
-    fetchComic: () => dispatch(fetchComics())
+    fetchComic: () => dispatch(fetchComics()),
   };
 };
 
@@ -36,3 +41,10 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(App);
+
+const AppContainer = styled.div`
+  background-color: #CCC7B9;
+`
+const SectionTitle = styled.h2`
+  
+`
