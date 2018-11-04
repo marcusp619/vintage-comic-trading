@@ -24,3 +24,12 @@ export const hasErrored = (state = false, action) => {
       return state;
   }
 };
+
+export const userSignedIn = (state = null, action) => {
+  switch (action.type) {
+    case 'USER_SIGNED_IN':
+      return [{username: action.userSignedIn, comics: []}];
+    default:
+      return state;
+  }
+}

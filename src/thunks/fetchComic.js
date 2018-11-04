@@ -13,10 +13,11 @@ export const fetchComics = () => {
       let url = `https://gateway.marvel.com:443/v1/public/characters?name=wolverine&apikey=${PUBLIC_KEY}&hash=${hash}`;
 
       const response = await fetch(url);
-      const result = await response.json();
       dispatch(isLoading(false));
+      const result = await response.json();
       dispatch(comicFetchDataSuccess(result.data.results));
     } catch {
+      dispatch(isLoading(false));
       dispatch(hasErrored(true));
     }
   };

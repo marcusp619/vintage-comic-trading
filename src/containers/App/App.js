@@ -1,21 +1,38 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-//import {fetchCharacter} from '../../utils/API';
-//import {comicFetchDataSuccess} from '../../actions';
-import {fetchComics} from '../../thunks/fetchComic' 
-import './App.css';
+import {fetchComics} from '../../thunks/fetchComic';
+import Header from '../Header/';
+import Hero from '../../components/Hero';
+import styled from 'styled-components';
 
 export class App extends Component {
- async componentDidMount() {
-    const character = await this.props.fetchComic();
-    console.log(character)
+  constructor(props) {
+    super(props)
+    this.state = {
+      hasOverlay: false
+    }
+  }
+  async componentDidMount() {
+    try {
+      const character = await this.props.fetchComic();
+    } catch (error) {
+      throw Error(error.message);
+    }
+  }
+
+  toggleOverlay = () => {
+    this.setState({hasOverlay: !this.state.hasOverlay})
   }
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">Learn React</header>
-      </div>
+      <AppContainer>
+        <Header toggleOverlay={this.toggleOverlay}/>
+        <Hero />
+        <SectionWrapper>
+          <SectionTitle>Your Comics</SectionTitle>
+        </SectionWrapper>
+      </AppContainer>
     );
   }
 }
@@ -28,7 +45,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
   return {
-    fetchComic: () => dispatch(fetchComics())
+    fetchComic: () => dispatch(fetchComics()),
   };
 };
 
@@ -36,3 +53,18 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps,
 )(App);
+
+const AppContainer = styled.div`
+  background-color: #CCC7B9;
+`
+
+const SectionWrapper = styled.section`
+  
+`
+
+const SectionTitle = styled.h2`
+  color: #AF7A6D; 
+  margin-top: 2em;
+  text-align: center;
+
+`
