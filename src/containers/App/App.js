@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchComics } from "../../thunks/fetchComic";
+import { fetchCharacterData } from "../../thunks/fetchComic";
 import Header from "../Header/";
 import Hero from "../../components/Hero";
 import styled from "styled-components";
@@ -8,7 +8,7 @@ import styled from "styled-components";
 export class App extends Component {
   async componentDidMount() {
     try {
-      const character = await this.props.fetchComic();
+      const character = await this.props.fetchCharacterData();
     } catch (error) {
       throw Error(error.message);
     }
@@ -35,7 +35,7 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
   return {
-    fetchComic: () => dispatch(fetchComics())
+    fetchCharacterData: () => dispatch(fetchCharacterData())
   };
 };
 

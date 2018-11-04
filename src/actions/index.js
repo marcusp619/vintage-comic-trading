@@ -13,6 +13,11 @@ export const comicFetchDataSuccess = comic => ({
   comic
 });
 
+export const characterFetchDataSuccess = character => ({
+  type: "CHARACTER_FETCH_DATA_SUCCESS",
+  character
+});
+
 export const addComicToUser = comic => ({
   type: "ADD_COMIC_TO_USER",
   comic

@@ -1,7 +1,7 @@
-import {fetchComics} from '../fetchComic';
-import {isLoading, hasErrored, comicFetchDataSuccess} from '../../actions';
+import { fetchCharacterData } from "../fetchComic";
+import { isLoading, hasErrored, comicFetchDataSuccess } from "../../actions";
 
-describe('fetchComics', () => {
+describe("fetchCharacterData", () => {
   let mockUrl;
   let mockDispatch;
   let mockComic;
@@ -12,42 +12,42 @@ describe('fetchComics', () => {
       data: {
         results: {
           id: 1009718,
-          name: 'Wolverine',
+          name: "Wolverine",
           description:
-            "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
-        },
-      },
+            "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+        }
+      }
     };
   });
 
-  it('calls dispatch wtih the isLoading action', () => {
-    const thunk = fetchComics();
+  it("calls dispatch wtih the isLoading action", () => {
+    const thunk = fetchCharacterData();
     thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
   });
 
-  it('should dispatch hasErrored(true) if the response is not ok', async () => {
+  it("should dispatch hasErrored(true) if the response is not ok", async () => {
     window.fetch = jest.fn().mockImplementation(() =>
       Promise.resolve({
-        ok: false,
-      }),
+        ok: false
+      })
     );
-    const thunk = fetchComics();
+    const thunk = fetchCharacterData();
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
   });
 
-  it('should dispatch comicFetchDataSuccess if the response is ok', async () => {
+  it("should dispatch comicFetchDataSuccess if the response is ok", async () => {
     window.fetch = jest.fn(() =>
       Promise.resolve({
         ok: true,
-        json: () => Promise.resolve(mockComic),
-      }),
+        json: () => Promise.resolve(mockComic)
+      })
     );
-    const thunk = fetchComics();
+    const thunk = fetchCharacterData();
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(
-      comicFetchDataSuccess(mockComic.data.results),
+      comicFetchDataSuccess(mockComic.data.results)
     );
   });
 });
