@@ -18,7 +18,7 @@ export const addComicToUser = comic => ({
   comic,
 });
 
-export const userSigednIn = user => ({
+export const userSignedIn = user => ({
   type: 'USER_SIGNED_IN',
   user,
 });

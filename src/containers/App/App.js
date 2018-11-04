@@ -1,11 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchComics} from '../../thunks/fetchComic';
-import Header from '../../components/Header/';
+import Header from '../Header/';
 import Hero from '../../components/Hero';
 import styled from 'styled-components';
 
 export class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      hasOverlay: false
+    }
+  }
   async componentDidMount() {
     try {
       const character = await this.props.fetchComic();
@@ -14,11 +20,18 @@ export class App extends Component {
     }
   }
 
+  toggleOverlay = () => {
+    this.setState({hasOverlay: !this.state.hasOverlay})
+  }
+
   render() {
     return (
       <AppContainer>
-        <Header />
+        <Header toggleOverlay={this.toggleOverlay}/>
         <Hero />
+        <SectionWrapper>
+          <SectionTitle>Your Comics</SectionTitle>
+        </SectionWrapper>
       </AppContainer>
     );
   }
@@ -44,6 +57,14 @@ export default connect(
 const AppContainer = styled.div`
   background-color: #CCC7B9;
 `
-const SectionTitle = styled.h2`
+
+const SectionWrapper = styled.section`
   
+`
+
+const SectionTitle = styled.h2`
+  color: #AF7A6D; 
+  margin-top: 2em;
+  text-align: center;
+
 `

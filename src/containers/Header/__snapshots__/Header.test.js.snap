@@ -34,6 +34,7 @@ ShallowWrapper {
             Browse
           </ForwardRef>
         </nav>,
+        <Connect(UserForm) />,
       ],
     },
     "ref": null,
@@ -61,7 +62,7 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bwzfXH",
+              "componentId": "sc-htpNat",
               "isStatic": true,
               "rules": Array [
                 "
@@ -83,7 +84,7 @@ ShallowWrapper {
             },
             "displayName": "styled.button",
             "render": [Function],
-            "styledComponentId": "sc-bwzfXH",
+            "styledComponentId": "sc-htpNat",
             "target": "button",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -94,13 +95,13 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
+            "componentId": "sc-bwzfXH",
             "isStatic": true,
             "rules": Array [],
           },
           "displayName": "styled.div",
           "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
+          "styledComponentId": "sc-bwzfXH",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -139,7 +140,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": undefined,
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-htpNat",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -161,7 +162,7 @@ ShallowWrapper {
               },
               "displayName": "styled.button",
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -181,7 +182,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": undefined,
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-htpNat",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -203,7 +204,7 @@ ShallowWrapper {
               },
               "displayName": "styled.button",
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -223,7 +224,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": undefined,
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-htpNat",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -245,7 +246,7 @@ ShallowWrapper {
               },
               "displayName": "styled.button",
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -255,12 +256,21 @@ ShallowWrapper {
         ],
         "type": "nav",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": Object {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
       "componentStyle": ComponentStyle {
-        "componentId": "sc-htpNat",
+        "componentId": "sc-bxivhb",
         "isStatic": true,
         "rules": Array [
           "
@@ -275,7 +285,7 @@ ShallowWrapper {
       },
       "displayName": "styled.header",
       "render": [Function],
-      "styledComponentId": "sc-htpNat",
+      "styledComponentId": "sc-bxivhb",
       "target": "header",
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -305,6 +315,7 @@ ShallowWrapper {
               Browse
             </ForwardRef>
           </nav>,
+          <Connect(UserForm) />,
         ],
       },
       "ref": null,
@@ -332,7 +343,7 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": undefined,
               "componentStyle": ComponentStyle {
-                "componentId": "sc-bwzfXH",
+                "componentId": "sc-htpNat",
                 "isStatic": true,
                 "rules": Array [
                   "
@@ -354,7 +365,7 @@ ShallowWrapper {
               },
               "displayName": "styled.button",
               "render": [Function],
-              "styledComponentId": "sc-bwzfXH",
+              "styledComponentId": "sc-htpNat",
               "target": "button",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -365,13 +376,13 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bdVaJa",
+              "componentId": "sc-bwzfXH",
               "isStatic": true,
               "rules": Array [],
             },
             "displayName": "styled.div",
             "render": [Function],
-            "styledComponentId": "sc-bdVaJa",
+            "styledComponentId": "sc-bwzfXH",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -410,7 +421,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": undefined,
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "sc-htpNat",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -432,7 +443,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.button",
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "sc-htpNat",
                 "target": "button",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -452,7 +463,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": undefined,
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "sc-htpNat",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -474,7 +485,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.button",
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "sc-htpNat",
                 "target": "button",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -494,7 +505,7 @@ ShallowWrapper {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": undefined,
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-bwzfXH",
+                  "componentId": "sc-htpNat",
                   "isStatic": true,
                   "rules": Array [
                     "
@@ -516,7 +527,7 @@ ShallowWrapper {
                 },
                 "displayName": "styled.button",
                 "render": [Function],
-                "styledComponentId": "sc-bwzfXH",
+                "styledComponentId": "sc-htpNat",
                 "target": "button",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -526,12 +537,21 @@ ShallowWrapper {
           ],
           "type": "nav",
         },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
       ],
       "type": Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-htpNat",
+          "componentId": "sc-bxivhb",
           "isStatic": true,
           "rules": Array [
             "
@@ -546,7 +566,7 @@ ShallowWrapper {
         },
         "displayName": "styled.header",
         "render": [Function],
-        "styledComponentId": "sc-htpNat",
+        "styledComponentId": "sc-bxivhb",
         "target": "header",
         "toString": [Function],
         "warnTooManyClasses": [Function],
