@@ -18,7 +18,7 @@ ShallowWrapper {
     "nodeType": "function",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Connect(Header) />,
         <Hero />,
         <ForwardRef>
           <ForwardRef>
@@ -32,7 +32,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {},
         "ref": null,
         "rendered": null,
@@ -70,20 +70,19 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-gzVnrw",
+              "componentId": "sc-dnqmqq",
               "isStatic": true,
               "rules": Array [
                 "
-  color: #AF7A6D; 
+  color: #af7a6d;
   margin-top: 2em;
   text-align: center;
-
 ",
               ],
             },
             "displayName": "styled.h2",
             "render": [Function],
-            "styledComponentId": "sc-gzVnrw",
+            "styledComponentId": "sc-dnqmqq",
             "target": "h2",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -94,17 +93,13 @@ ShallowWrapper {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-bZQynM",
+            "componentId": "sc-htoDjs",
             "isStatic": true,
-            "rules": Array [
-              "
-  
-",
-            ],
+            "rules": Array [],
           },
           "displayName": "styled.section",
           "render": [Function],
-          "styledComponentId": "sc-bZQynM",
+          "styledComponentId": "sc-htoDjs",
           "target": "section",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -116,17 +111,17 @@ ShallowWrapper {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
       "componentStyle": ComponentStyle {
-        "componentId": "sc-EHOje",
+        "componentId": "sc-gzVnrw",
         "isStatic": true,
         "rules": Array [
           "
-  background-color: #CCC7B9;
+  background-color: #ccc7b9;
 ",
         ],
       },
       "displayName": "styled.div",
       "render": [Function],
-      "styledComponentId": "sc-EHOje",
+      "styledComponentId": "sc-gzVnrw",
       "target": "div",
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -140,7 +135,7 @@ ShallowWrapper {
       "nodeType": "function",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Connect(Header) />,
           <Hero />,
           <ForwardRef>
             <ForwardRef>
@@ -154,7 +149,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {},
           "ref": null,
           "rendered": null,
@@ -192,20 +187,19 @@ ShallowWrapper {
               "$$typeof": Symbol(react.forward_ref),
               "attrs": undefined,
               "componentStyle": ComponentStyle {
-                "componentId": "sc-gzVnrw",
+                "componentId": "sc-dnqmqq",
                 "isStatic": true,
                 "rules": Array [
                   "
-  color: #AF7A6D; 
+  color: #af7a6d;
   margin-top: 2em;
   text-align: center;
-
 ",
                 ],
               },
               "displayName": "styled.h2",
               "render": [Function],
-              "styledComponentId": "sc-gzVnrw",
+              "styledComponentId": "sc-dnqmqq",
               "target": "h2",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -216,17 +210,13 @@ ShallowWrapper {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-bZQynM",
+              "componentId": "sc-htoDjs",
               "isStatic": true,
-              "rules": Array [
-                "
-  
-",
-              ],
+              "rules": Array [],
             },
             "displayName": "styled.section",
             "render": [Function],
-            "styledComponentId": "sc-bZQynM",
+            "styledComponentId": "sc-htoDjs",
             "target": "section",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -238,17 +228,17 @@ ShallowWrapper {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-EHOje",
+          "componentId": "sc-gzVnrw",
           "isStatic": true,
           "rules": Array [
             "
-  background-color: #CCC7B9;
+  background-color: #ccc7b9;
 ",
           ],
         },
         "displayName": "styled.div",
         "render": [Function],
-        "styledComponentId": "sc-EHOje",
+        "styledComponentId": "sc-gzVnrw",
         "target": "div",
         "toString": [Function],
         "warnTooManyClasses": [Function],

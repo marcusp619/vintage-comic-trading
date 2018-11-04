@@ -1,0 +1,341 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserForm Container should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <UserForm />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <label>
+          UserName:
+          <ForwardRef
+            name="user"
+            onChange={[Function]}
+            value=""
+          />
+        </label>,
+        <ForwardRef>
+          Submit
+        </ForwardRef>,
+      ],
+      "onSubmit": [Function],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "UserName:",
+            <ForwardRef
+              name="user"
+              onChange={[Function]}
+              value=""
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "UserName:",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "name": "user",
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": undefined,
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": true,
+                "rules": Array [
+                  "
+  display: block;
+  width: 500px;
+  height: 2em;
+",
+                ],
+              },
+              "displayName": "styled.input",
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "input",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": "label",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Submit",
+        },
+        "ref": null,
+        "rendered": "Submit",
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": undefined,
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "rules": Array [
+              "
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #AF7A6D;
+  color: #AF7A6D;
+  display: block;
+  font-size: 1em;
+  margin 0 1em;
+  padding: 0.45em 1.25em;
+  transition: all .75s ease-out;
+
+  &:hover {
+    background: #AF7A6D;
+    color: #fff;
+  }
+",
+            ],
+          },
+          "displayName": "styled.button",
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "button",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
+  background: rgba(226, 212, 186, 0.8);
+  color: #af7a6d;
+  display: grid;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  align-items: center;
+  height: 400px;
+  position: absolute;
+  top: 180%;
+  left: 20%;
+  width: 50em;
+  z-index: 2;
+",
+        ],
+      },
+      "displayName": "styled.form",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "form",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <label>
+            UserName:
+            <ForwardRef
+              name="user"
+              onChange={[Function]}
+              value=""
+            />
+          </label>,
+          <ForwardRef>
+            Submit
+          </ForwardRef>,
+        ],
+        "onSubmit": [Function],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "UserName:",
+              <ForwardRef
+                name="user"
+                onChange={[Function]}
+                value=""
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "UserName:",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "name": "user",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": undefined,
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+  display: block;
+  width: 500px;
+  height: 2em;
+",
+                  ],
+                },
+                "displayName": "styled.input",
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "input",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": "label",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Submit",
+          },
+          "ref": null,
+          "rendered": "Submit",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": undefined,
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": true,
+              "rules": Array [
+                "
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #AF7A6D;
+  color: #AF7A6D;
+  display: block;
+  font-size: 1em;
+  margin 0 1em;
+  padding: 0.45em 1.25em;
+  transition: all .75s ease-out;
+
+  &:hover {
+    background: #AF7A6D;
+    color: #fff;
+  }
+",
+              ],
+            },
+            "displayName": "styled.button",
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "button",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": undefined,
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "rules": Array [
+            "
+  background: rgba(226, 212, 186, 0.8);
+  color: #af7a6d;
+  display: grid;
+  justify-content: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  align-items: center;
+  height: 400px;
+  position: absolute;
+  top: 180%;
+  left: 20%;
+  width: 50em;
+  z-index: 2;
+",
+          ],
+        },
+        "displayName": "styled.form",
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "form",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

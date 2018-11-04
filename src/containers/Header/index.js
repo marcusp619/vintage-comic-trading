@@ -1,39 +1,47 @@
-import React, {Component} from 'react';
-import styled from 'styled-components';
-import UserForm from '../UserForm';
-class Header extends Component {
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import styled from "styled-components";
+import UserForm from "../UserForm";
+
+export class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisible: false,
+      isVisible: false
     };
   }
 
   toggleSignInForm = () => {
-    this.props.toggleOverlay();
-    this.setState({isVisible: !this.state.isVisible});
-  }
+    this.setState({ isVisible: !this.state.isVisible });
+  };
 
   render() {
+    const isLoggedIn = this.props.user;
     return (
       <HeaderContainer>
         <SignInContainer>
-          <Button onClick={this.toggleSignInForm}>Sign In</Button>
+          <Button onClick={this.toggleSignInForm}>
+            {isLoggedIn ? this.props.user.username : "Sign In"}
+          </Button>
         </SignInContainer>
         <nav>
           <Button>Home</Button>
           <Button>About</Button>
           <Button>Browse</Button>
         </nav>
-        {this.state.isVisible && 
-            <UserForm />
-        }
+        {this.state.isVisible && <UserForm />}
       </HeaderContainer>
     );
   }
 }
 
-export const Button = styled.button`
+export const mapStateToProps = state => ({
+  user: state.user
+});
+
+export default connect(mapStateToProps)(Header);
+
+const Button = styled.button`
   background: transparent;
   border-radius: 3px;
   border: 2px solid #AF7A6D;
@@ -59,7 +67,5 @@ const HeaderContainer = styled.header`
   margin: 0 auto;
   z-index: 1;
 `;
-
-export default Header;
 
 const SignInContainer = styled.div``;
