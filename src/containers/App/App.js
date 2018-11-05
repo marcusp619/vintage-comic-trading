@@ -7,8 +7,7 @@ export class App extends Component {
   async componentDidMount() {
     try {
       // const character = await this.props.fetchCharacterData();
-      const comics = await this.props.fetchComics();
-      console.log(comics);
+      await this.props.fetchComics();
     } catch (error) {
       throw Error(error.message);
     }

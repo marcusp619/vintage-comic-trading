@@ -1,4 +1,5 @@
 export const cleanComicData = character => {
+  console.log(character);
   const cleanedComics = character.data.results.map(comic => {
     const {
       characters,
