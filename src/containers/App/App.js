@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchCharacterData, fetchComics } from "../../thunks/fetchComic";
-import Header from "../Header/";
-import Hero from "../../components/Hero";
+// import Header from "../Header/";
+// import Hero from "../../components/Hero";
 import styled from "styled-components";
-
+import Router from "../../utils/Router";
 export class App extends Component {
   async componentDidMount() {
     try {
@@ -19,13 +19,7 @@ export class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <AppContainer>
-          <Header />
-          <Hero />
-          <SectionWrapper>
-            <SectionTitle>Your Comics</SectionTitle>
-          </SectionWrapper>
-        </AppContainer>
+        <Router />
       </BrowserRouter>
     );
   }
@@ -49,14 +43,14 @@ export default connect(
   mapDispatchToProps
 )(App);
 
-const AppContainer = styled.div`
-  background-color: #ccc7b9;
-`;
+// const AppContainer = styled.div`
+//   background-color: #ccc7b9;
+// `;
 
-const SectionWrapper = styled.section``;
+// const SectionWrapper = styled.section``;
 
-const SectionTitle = styled.h2`
-  color: #af7a6d;
-  margin-top: 2em;
-  text-align: center;
-`;
+// const SectionTitle = styled.h2`
+//   color: #af7a6d;
+//   margin-top: 2em;
+//   text-align: center;
+// `;

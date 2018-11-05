@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import UserForm from "../UserForm";
 
@@ -25,8 +26,12 @@ export class Header extends Component {
           </Button>
         </SignInContainer>
         <nav>
-          <Button>Home</Button>
-          <Button>About</Button>
+          <Button>
+            <StyledLink to="/">Home</StyledLink>
+          </Button>
+          <Button>
+            <StyledLink to="/About">About</StyledLink>
+          </Button>
           <Button>Browse</Button>
         </nav>
         {this.state.isVisible && (
@@ -55,6 +60,15 @@ const Button = styled.button`
 
   &:hover {
     background: #AF7A6D;
+    color: #fff;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  color: #af7a6d;
+  text-decoration: none;
+
+  &:hover {
     color: #fff;
   }
 `;
