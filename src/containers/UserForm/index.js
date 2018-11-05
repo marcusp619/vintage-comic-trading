@@ -1,24 +1,26 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {userSignedIn} from '../../actions';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { userSignedIn } from "../../actions";
+import styled from "styled-components";
 
-class UserForm extends Component {
+export class UserForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: '',
+      user: ""
     };
   }
 
   handleFormChange = event => {
-    this.setState({user: event.target.value});
+    this.setState({ user: event.target.value });
   };
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.props.getUser(this.state.user);
-    this.setState({user: ''});
+    console.log(this.state.user);
+    console.log(this.props.getUser(this.state.user));
+    this.props.toggleSignInForm();
+    this.setState({ user: "" });
   };
 
   render() {
@@ -38,9 +40,24 @@ class UserForm extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  user: state.user
+});
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    getUser: user => dispatch(userSignedIn(user))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UserForm);
+
 const Form = styled.form`
   background: rgba(226, 212, 186, 0.8);
-  color: #AF7A6D;
+  color: #af7a6d;
   display: grid;
   justify-content: center;
   font-size: 1.2em;
@@ -76,18 +93,3 @@ const Button = styled.button`
     color: #fff;
   }
 `;
-
-export const mapStateToProps = state => ({
-  user: state.user,
-});
-
-export const mapDispatchToProps = dispatch => {
-  return {
-    getUser: (user) => dispatch(userSignedIn(user)),
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(UserForm);
