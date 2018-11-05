@@ -2,7 +2,6 @@ import { fetchCharacterData } from "../fetchComic";
 import { isLoading, hasErrored, comicFetchDataSuccess } from "../../actions";
 
 describe("fetchCharacterData", () => {
-  let mockUrl;
   let mockDispatch;
   let mockComic;
 

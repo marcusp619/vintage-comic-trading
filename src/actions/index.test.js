@@ -1,13 +1,13 @@
-import * as actions from './';
+import * as actions from "./";
 
-describe('actions', () => {
-  it('should have a type of IS_LOADING', () => {
+describe("actions", () => {
+  it("should have a type of IS_LOADING", () => {
     //setup
-    const bool = 'true';
+    const bool = "true";
 
     const expectedAction = {
-      type: 'IS_LOADING',
-      isLoading: 'true',
+      type: "IS_LOADING",
+      isLoading: "true"
     };
 
     //execution
@@ -17,13 +17,13 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction);
   });
 
-  it('should have a type of hasErrored', () => {
+  it("should have a type of hasErrored", () => {
     //setup
-    const bool = 'true';
+    const bool = "true";
 
     const expectedAction = {
-      type: 'HAS_ERRORED',
-      hasErrored: 'true',
+      type: "HAS_ERRORED",
+      hasErrored: "true"
     };
 
     //execution
@@ -33,18 +33,18 @@ describe('actions', () => {
     expect(result).toEqual(expectedAction);
   });
 
-  it('should have a type of COMICS_FETCH_DATA_SUCCESS', () => {
+  it("should have a type of COMICS_FETCH_DATA_SUCCESS", () => {
     //setup
     const comic = {
       id: 1009718,
-      name: 'Wolverine',
+      name: "Wolverine",
       description:
-        "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers.",
+        "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
     };
 
     const expectedAction = {
-      type: 'COMICS_FETCH_DATA_SUCCESS',
-      comic,
+      type: "COMICS_FETCH_DATA_SUCCESS",
+      comic
     };
 
     //execution

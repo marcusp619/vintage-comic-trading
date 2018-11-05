@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchCharacterData, fetchComics } from "../../thunks/fetchComic";
-// import Header from "../Header/";
-// import Hero from "../../components/Hero";
-import styled from "styled-components";
 import Router from "../../utils/Router";
 export class App extends Component {
   async componentDidMount() {
@@ -42,15 +39,3 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
-
-// const AppContainer = styled.div`
-//   background-color: #ccc7b9;
-// `;
-
-// const SectionWrapper = styled.section``;
-
-// const SectionTitle = styled.h2`
-//   color: #af7a6d;
-//   margin-top: 2em;
-//   text-align: center;
-// `;

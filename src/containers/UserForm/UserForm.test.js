@@ -1,11 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {shallow, mount} from 'enzyme';
-import {UserForm, mapStateToProps, mapDispatchToProps} from './index.js';
-import {userSignedIn} from '../../actions';
+import React from "react";
+import { shallow } from "enzyme";
+import { UserForm, mapStateToProps, mapDispatchToProps } from "./index.js";
+import { userSignedIn } from "../../actions";
 
-describe('UserForm Container', () => {
-  it('should match snapshot', () => {
+describe("UserForm Container", () => {
+  it("should match snapshot", () => {
     //setup
     const wrapper = shallow(<UserForm />);
 
@@ -13,13 +12,13 @@ describe('UserForm Container', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('mapStateToProps', () => {
+  it("mapStateToProps", () => {
     //setup
     const mockState = {
-      user: 'mark',
+      user: "mark"
     };
     const expected = {
-      user: 'mark',
+      user: "mark"
     };
 
     //execution
@@ -29,15 +28,15 @@ describe('UserForm Container', () => {
     expect(mappedProps).toEqual(expected);
   });
 
-  describe('mapDispatchToProps', () => {
-    it('calls dispatch with an userSignedIn action', () => {
+  describe("mapDispatchToProps", () => {
+    it("calls dispatch with an userSignedIn action", () => {
       //setup
       const mockDispatch = jest.fn();
-      const actionToDispatch = userSignedIn('mark');
+      const actionToDispatch = userSignedIn("mark");
 
       //execution
       const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.getUser('mark');
+      mappedProps.getUser("mark");
 
       //expectation
       expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
