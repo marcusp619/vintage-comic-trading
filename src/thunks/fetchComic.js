@@ -20,7 +20,7 @@ export const fetchCharacterData = () => {
       const response = await fetch(url);
       dispatch(isLoading(false));
       const result = await response.json();
-      cleanComicData(result);
+      // cleanComicData(result);
       dispatch(characterFetchDataSuccess(result.data.results[0].name));
       return result.data.results[0];
     } catch {
@@ -31,18 +31,19 @@ export const fetchCharacterData = () => {
 };
 
 export const fetchComics = comicsUrlArray => {
-  return dispatch => {
-    dispatch(isLoading(true));
-    const unresolvedPromises = comicsUrlArray.map(async comicUrl => {
-      let timestamp = Date.now().toString();
-      let hash = md5(`${timestamp}${PRIV_KEY}${PUBLIC_KEY}`);
-      const url = `${comicUrl.resourceURI}`;
-      console.log(url);
-      // const response = await fetch(url);
-      // const result = await response.json();
-      // console.log(result);
-      // return response;
-    });
-    // console.log(unresolvedPromises);
+  return async dispatch => {
+    try {
+      dispatch(isLoading(true));
+
+      // let timestamp = Date.now().toString();
+      // let hash = md5(`${timestamp}${PRIV_KEY}${PUBLIC_KEY}`);
+      let url = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&dateRange=1970-01-01%2C%201990-01-01&apikey=${PUBLIC_KEY}`;
+      const response = await fetch(url);
+      const result = await response.json();
+      dispatch(comicFetchDataSuccess(result));
+    } catch {
+      dispatch(isLoading(false));
+      dispatch(hasErrored(true));
+    }
   };
 };

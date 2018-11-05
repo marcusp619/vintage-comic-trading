@@ -7,7 +7,7 @@ export class App extends Component {
   async componentDidMount() {
     try {
       const character = await this.props.fetchCharacterData();
-      // const comics = await this.props.fetchComics(character);
+      const comics = await this.props.fetchComics();
     } catch (error) {
       throw Error(error.message);
     }
@@ -31,7 +31,7 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => {
   return {
     fetchCharacterData: () => dispatch(fetchCharacterData()),
-    fetchComics: urls => dispatch(fetchComics(urls))
+    fetchComics: () => dispatch(fetchComics())
   };
 };
 
