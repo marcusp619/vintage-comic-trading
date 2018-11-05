@@ -29,7 +29,9 @@ export class Header extends Component {
           <Button>About</Button>
           <Button>Browse</Button>
         </nav>
-        {this.state.isVisible && <UserForm />}
+        {this.state.isVisible && (
+          <UserForm toggleSignInForm={this.toggleSignInForm} />
+        )}
       </HeaderContainer>
     );
   }

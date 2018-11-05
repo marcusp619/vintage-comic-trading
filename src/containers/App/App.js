@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchCharacterData } from "../../thunks/fetchComic";
+import { fetchCharacterData, fetchComics } from "../../thunks/fetchComic";
 import Header from "../Header/";
 import Hero from "../../components/Hero";
 import styled from "styled-components";
@@ -9,6 +10,7 @@ export class App extends Component {
   async componentDidMount() {
     try {
       const character = await this.props.fetchCharacterData();
+      // const comics = await this.props.fetchComics(character);
     } catch (error) {
       throw Error(error.message);
     }
@@ -16,13 +18,15 @@ export class App extends Component {
 
   render() {
     return (
-      <AppContainer>
-        <Header />
-        <Hero />
-        <SectionWrapper>
-          <SectionTitle>Your Comics</SectionTitle>
-        </SectionWrapper>
-      </AppContainer>
+      <BrowserRouter>
+        <AppContainer>
+          <Header />
+          <Hero />
+          <SectionWrapper>
+            <SectionTitle>Your Comics</SectionTitle>
+          </SectionWrapper>
+        </AppContainer>
+      </BrowserRouter>
     );
   }
 }
@@ -35,7 +39,8 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
   return {
-    fetchCharacterData: () => dispatch(fetchCharacterData())
+    fetchCharacterData: () => dispatch(fetchCharacterData()),
+    fetchComics: urls => dispatch(fetchComics(urls))
   };
 };
 

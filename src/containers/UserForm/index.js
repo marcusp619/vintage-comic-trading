@@ -19,7 +19,7 @@ export class UserForm extends Component {
     event.preventDefault();
     console.log(this.state.user);
     console.log(this.props.getUser(this.state.user));
-
+    this.props.toggleSignInForm();
     this.setState({ user: "" });
   };
 
