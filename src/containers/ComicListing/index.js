@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 const ComicListing = props => {
   const comics = this.props.comics.map(comic => {
-    return <ComicListing comic={comic} />;
+    return <ComicListItem comic={comic} />;
   });
   return <div>{comics}</div>;
 };

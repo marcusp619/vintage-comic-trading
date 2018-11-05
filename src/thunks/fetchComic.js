@@ -6,6 +6,7 @@ import {
   comicFetchDataSuccess,
   characterFetchDataSuccess
 } from "../actions";
+
 const PRIV_KEY = "05198a9099469d502c9138bd02417830becd2e8f";
 const PUBLIC_KEY = "95d642f0dfe4844b8d9078f4e359a1af";
 
@@ -30,17 +31,16 @@ export const fetchCharacterData = () => {
   };
 };
 
-export const fetchComics = comicsUrlArray => {
+export const fetchComics = () => {
   return async dispatch => {
+    const PUBLIC_KEY = "95d642f0dfe4844b8d9078f4e359a1af";
     try {
       dispatch(isLoading(true));
-
-      // let timestamp = Date.now().toString();
-      // let hash = md5(`${timestamp}${PRIV_KEY}${PUBLIC_KEY}`);
-      let url = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&dateRange=1970-01-01%2C%201990-01-01&apikey=${PUBLIC_KEY}`;
+      const url = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&dateRange=2018-01-11%2C%202018-05-11&apikey=${PUBLIC_KEY}`;
       const response = await fetch(url);
       const result = await response.json();
-      dispatch(comicFetchDataSuccess(result));
+      const cleanedComics = cleanComicData(result);
+      dispatch(comicFetchDataSuccess(cleanedComics));
     } catch {
       dispatch(isLoading(false));
       dispatch(hasErrored(true));
