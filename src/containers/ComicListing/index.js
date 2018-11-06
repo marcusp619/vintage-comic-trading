@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { Header } from "../Header";
 
 export const ComicListing = props => {
-  console.log(props.comics);
   const ComicItems = props.comics.map((comic, index) => {
     return <ComicListingItem comic={comic} />;
   });

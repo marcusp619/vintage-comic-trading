@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
+import { addComicToUser } from "../../actions";
 import styled from "styled-components";
 
-class ComicListItem extends Component {
+export class ComicListItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,11 +15,18 @@ class ComicListItem extends Component {
     this.setState({ displayComicData: !this.state.displayComicData });
   };
 
+  addComic = comic => {
+    console.log(comic);
+    console.log(this.props.user.username);
+    console.log(this.props.user.comics);
+    this.props.addComicToUser(comic);
+  };
   render() {
     return (
       <ComicCard
         onMouseEnter={this.toggleHoverState}
         onMouseLeave={this.toggleHoverState}
+        onClick={() => this.addComic(this.props.comic.title)}
       >
         <ComicBookImg
           src={`${this.props.comic.images}`}
@@ -36,7 +44,21 @@ class ComicListItem extends Component {
   }
 }
 
-export default ComicListItem;
+export const mapStateToProps = state => ({
+  comics: state.comics,
+  user: state.user
+});
+
+export const mapDispatchToProps = dispatch => {
+  return {
+    addComicToUser: comic => dispatch(addComicToUser(comic))
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ComicListItem);
 
 const ComicCard = styled.div`
   box-shadow: 9px 14px 25px -5px rgba(0, 0, 0, 0.75);

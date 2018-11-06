@@ -17,8 +17,7 @@ export class UserForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.user);
-    console.log(this.props.getUser(this.state.user));
+    this.props.getUser(this.state.user);
     this.props.toggleSignInForm();
     this.setState({ user: "" });
   };
