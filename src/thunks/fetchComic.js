@@ -39,7 +39,8 @@ export const fetchComics = () => {
       const url = `https://gateway.marvel.com:443/v1/public/comics?format=comic&formatType=comic&dateRange=2018-01-11%2C%202018-05-11&apikey=${PUBLIC_KEY}`;
       const response = await fetch(url);
       const result = await response.json();
-      const cleanedComics = cleanComicData(result);
+      const cleanedComics = await cleanComicData(result);
+      dispatch(isLoading(false));
       dispatch(comicFetchDataSuccess(cleanedComics));
     } catch {
       dispatch(isLoading(false));

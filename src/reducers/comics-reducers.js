@@ -1,7 +1,7 @@
 export const comics = (state = [], action) => {
   switch (action.type) {
     case "COMICS_FETCH_DATA_SUCCESS":
-      return [action.comic];
+      return action.comic;
     default:
       return state;
   }
@@ -34,10 +34,16 @@ export const hasErrored = (state = false, action) => {
   }
 };
 
-export const userSignedIn = (state = null, action) => {
+export const user = (state = "", action) => {
+  console.log(state.name);
   switch (action.type) {
     case "USER_SIGNED_IN":
-      return { username: action.user, comics: [] };
+      return { name: action.user, comics: [] };
+    case "ADD_COMIC_TO_USER":
+      return {
+        name: state.name,
+        comics: [...state.comics, action.comic]
+      };
     default:
       return state;
   }

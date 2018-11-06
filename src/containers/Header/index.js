@@ -32,7 +32,9 @@ export class Header extends Component {
           <Button>
             <StyledLink to="/About">About</StyledLink>
           </Button>
-          <Button>Browse</Button>
+          <Button>
+            <StyledLink to="/Browse">Browse</StyledLink>
+          </Button>
         </nav>
         {this.state.isVisible && (
           <UserForm toggleSignInForm={this.toggleSignInForm} />

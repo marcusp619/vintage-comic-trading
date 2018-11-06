@@ -4,14 +4,14 @@ import {
   hasErrored,
   comics,
   character,
-  userSignedIn
+  user
 } from "./comics-reducers";
 
 const rootReducer = combineReducers({
   comics,
   isLoading,
   hasErrored,
-  user: userSignedIn,
+  user,
   character
 });
 
