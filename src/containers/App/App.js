@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { connect } from "react-redux";
-import { fetchCharacterData, fetchComics } from "../../thunks/fetchComic";
+import { fetchComics } from "../../thunks/fetchComic";
 import Router from "../../utils/Router";
 export class App extends Component {
   async componentDidMount() {
     try {
-      // const character = await this.props.fetchCharacterData();
       await this.props.fetchComics();
     } catch (error) {
       throw Error(error.message);
@@ -30,7 +29,6 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => {
   return {
-    fetchCharacterData: () => dispatch(fetchCharacterData()),
     fetchComics: () => dispatch(fetchComics())
   };
 };

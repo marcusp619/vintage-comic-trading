@@ -34,10 +34,14 @@ export const hasErrored = (state = false, action) => {
   }
 };
 
-export const userSignedIn = (state = null, action) => {
+export const user = (state = null, action) => {
   switch (action.type) {
     case "USER_SIGNED_IN":
       return { username: action.user, comics: [] };
+    case "ADD_COMIC_TO_USER":
+      return {
+        user: { username: state.user, comics: [action.comic, ...state.comic] }
+      };
     default:
       return state;
   }
