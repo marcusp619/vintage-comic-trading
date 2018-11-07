@@ -97,7 +97,7 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": "1541560028034",
+            "key": "1541561372467",
             "nodeType": "class",
             "props": Object {
               "comic": Object {
@@ -112,7 +112,7 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": "1541560028036",
+            "key": "1541561372469",
             "nodeType": "class",
             "props": Object {
               "comic": Object {
@@ -240,7 +240,7 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": "1541560028034",
+              "key": "1541561372467",
               "nodeType": "class",
               "props": Object {
                 "comic": Object {
@@ -255,7 +255,7 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": "1541560028036",
+              "key": "1541561372469",
               "nodeType": "class",
               "props": Object {
                 "comic": Object {

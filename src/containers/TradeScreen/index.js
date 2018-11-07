@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const TradeScreen = () => {
+export const TradeScreen = () => {
   return <h1>TradeScreen</h1>;
 };
 
