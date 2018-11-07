@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "../../containers/Header";
 import Hero from "../../components/Hero";
 import UserLoggedIn from "../../containers/UserLoggedIn";
+import PropTypes from "prop-types";
 
 export const Home = props => {
   console.log(props.user);
@@ -23,6 +24,11 @@ export const mapStateToProps = state => ({
   user: state.user,
   comics: state.comics
 });
+
+Home.propTypes = {
+  comics: PropTypes.array,
+  user: PropTypes.object
+};
 
 export default connect(mapStateToProps)(Home);
 

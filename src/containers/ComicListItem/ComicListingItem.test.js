@@ -101,13 +101,16 @@ describe("ComicListItem", () => {
     });
   });
 
-  it.skip("should handle click events", () => {
+  it("should handle click events", () => {
     const mockAddComic = jest.fn();
     const mockAddComicToUser = jest.fn();
     const wrapper = shallow(
       <ComicListItem addComicToUser={mockAddComicToUser} comic={mockArray} />
     );
-    wrapper.find(ComicCard).simulate("click");
+    wrapper
+      .find(ComicCard)
+      .at(0)
+      .simulate("click");
     expect(mockAddComic).toHaveBeenCalled();
   });
 });

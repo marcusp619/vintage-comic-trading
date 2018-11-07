@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import UserForm from "../UserForm";
+import PropTypes from "prop-types";
 
 export class Header extends Component {
   constructor(props) {
@@ -47,6 +48,10 @@ export class Header extends Component {
 export const mapStateToProps = state => ({
   user: state.user
 });
+
+Header.propTypes = {
+  user: PropTypes.object
+};
 
 export default connect(mapStateToProps)(Header);
 

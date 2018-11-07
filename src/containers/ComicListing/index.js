@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ComicListingItem from "../ComicListItem";
 import styled from "styled-components";
 import { Header } from "../Header";
+import PropTypes from "prop-types";
 
 export const ComicListing = props => {
   const ComicItems = props.comics.map((comic, index) => {
@@ -21,6 +22,11 @@ export const mapStateToProps = state => ({
   user: state.user,
   comics: state.comics
 });
+
+ComicListing.propTypes = {
+  comics: PropTypes.array,
+  user: PropTypes.object
+};
 
 export default connect(mapStateToProps)(ComicListing);
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { userSignedIn } from "../../actions";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export class UserForm extends Component {
   constructor(props) {
@@ -42,6 +43,10 @@ export class UserForm extends Component {
 export const mapStateToProps = state => ({
   user: state.user
 });
+
+UserForm.propTypes = {
+  user: PropTypes.object
+};
 
 export const mapDispatchToProps = dispatch => {
   return {

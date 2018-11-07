@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ComicListItem from "../ComicListItem";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export const UserLoggedIn = props => {
   const filteredList = props.user.comics.reduce((acc, userComic) => {
@@ -29,6 +30,11 @@ export const mapStateToProps = state => ({
   user: state.user,
   comics: state.comics
 });
+
+UserLoggedIn.propTypes = {
+  comics: PropTypes.array,
+  user: PropTypes.object
+};
 
 export default connect(mapStateToProps)(UserLoggedIn);
 

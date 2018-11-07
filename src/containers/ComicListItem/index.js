@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addComicToUser } from "../../actions";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 export class ComicListItem extends Component {
   constructor(props) {
@@ -45,6 +46,11 @@ export const mapStateToProps = state => ({
   comics: state.comics,
   user: state.user
 });
+
+ComicListItem.propTypes = {
+  comics: PropTypes.array,
+  user: PropTypes.object
+};
 
 export const mapDispatchToProps = dispatch => {
   return {
