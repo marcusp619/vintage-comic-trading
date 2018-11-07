@@ -2,7 +2,7 @@ import React from "react";
 
 import { shallow } from "enzyme";
 
-import { Header, Button } from "./index";
+import { Header, Button, mapStateToProps } from "./index";
 
 describe("Header", () => {
   it("Header should match snapshot", () => {
@@ -34,15 +34,18 @@ describe("Header", () => {
     it("should return an object with an user object", () => {
       //setup
       const mockState = {
-        comics: [
-          {
-            id: 1009718,
-            name: "Wolverine",
-            description:
-              "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
-          }
-        ],
-        isLoading: undefined,
-        hasErrored: undefined
+        user: { name: "mark", comics: [] }
       };
+
+      const expected = {
+        user: { name: "mark", comics: [] }
+      };
+
+      //execution
+      const mappedProps = mapStateToProps(mockState);
+
+      //expectation
+      expect(mappedProps).toEqual(expected);
+    });
+  });
 });
