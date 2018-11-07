@@ -1,12 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import ComicListingItem from "../ComicListingItem";
+import ComicListingItem from "../ComicListItem";
 import styled from "styled-components";
 import { Header } from "../Header";
 
 export const ComicListing = props => {
   const ComicItems = props.comics.map((comic, index) => {
-    return <ComicListingItem comic={comic} />;
+    return <ComicListingItem comic={comic} key={Date.now() + index} />;
   });
 
   return (

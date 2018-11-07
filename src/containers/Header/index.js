@@ -22,7 +22,7 @@ export class Header extends Component {
       <HeaderContainer>
         <SignInContainer>
           <Button onClick={this.toggleSignInForm}>
-            {isLoggedIn ? this.props.user.username : "Sign In"}
+            {isLoggedIn ? this.props.user.name : "Sign In"}
           </Button>
         </SignInContainer>
         <nav>
@@ -50,7 +50,7 @@ export const mapStateToProps = state => ({
 
 export default connect(mapStateToProps)(Header);
 
-const Button = styled.button`
+export const Button = styled.button`
   background: transparent;
   border-radius: 3px;
   border: 2px solid #AF7A6D;

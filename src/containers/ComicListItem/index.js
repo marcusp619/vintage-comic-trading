@@ -16,9 +16,6 @@ export class ComicListItem extends Component {
   };
 
   addComic = comic => {
-    console.log(comic);
-    console.log(this.props.user.username);
-    console.log(this.props.user.comics);
     this.props.addComicToUser(comic);
   };
   render() {
@@ -60,7 +57,7 @@ export default connect(
   mapDispatchToProps
 )(ComicListItem);
 
-const ComicCard = styled.div`
+export const ComicCard = styled.div`
   box-shadow: 9px 14px 25px -5px rgba(0, 0, 0, 0.75);
   background: grey;
   height: 300px;

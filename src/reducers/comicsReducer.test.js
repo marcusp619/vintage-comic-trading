@@ -1,4 +1,4 @@
-import { comics, isLoading, hasErrored } from "./comics-reducers";
+import { comics, isLoading, hasErrored, user } from "./comics-reducers";
 
 describe("comics reducer", () => {
   it("should return the initial state", () => {
@@ -12,16 +12,14 @@ describe("comics reducer", () => {
     expect(result).toEqual(expected);
   });
 
-  it("shoudl return state with new comic", () => {
+  it("should return state with new comic", () => {
     //setup
-    const expected = [
-      {
-        id: 1009718,
-        name: "Wolverine",
-        description:
-          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
-      }
-    ];
+    const expected = {
+      id: 1009718,
+      name: "Wolverine",
+      description:
+        "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+    };
 
     const mockAction = {
       type: "COMICS_FETCH_DATA_SUCCESS",
@@ -121,6 +119,68 @@ describe("comics reducer", () => {
       //execution
       const result = hasErrored(undefined, mockAction);
 
+      //expectation
+      expect(result).toEqual(expected);
+    });
+  });
+
+  describe("user reducer", () => {
+    it("should return initial state of '' ", () => {
+      //setup
+      const expected = "";
+
+      //execution
+      const result = user(undefined, "");
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
+
+    it("should return state with new user", () => {
+      //setup
+      const expected = {
+        comics: [],
+        name: { name: "Mark", comics: [] }
+      };
+
+      const mockAction = {
+        type: "USER_SIGNED_IN",
+        comics: [],
+        user: { name: "Mark", comics: [] }
+      };
+
+      //execution
+      const result = user(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
+
+    it.skip("should return state with user and added comic", () => {
+      //setup
+      const mockComic = {
+        id: 1009718,
+        name: "Wolverine",
+        description:
+          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+      };
+      const mockState = {
+        user: { name: "Mark", comics: [mockComic, mockComic] }
+      };
+
+      const expected = {
+        comics: [],
+        name: { name: "Mark", comics: [mockComic] }
+      };
+
+      const mockAction = {
+        type: "ADD_COMIC_TO_USER",
+        comics: [],
+        user: { name: "Mark", comics: [mockComic, mockComic] }
+      };
+
+      //execution
+      const result = user(undefined, mockAction);
       //expectation
       expect(result).toEqual(expected);
     });

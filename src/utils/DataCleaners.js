@@ -1,6 +1,5 @@
-export const cleanComicData = character => {
-  console.log(character);
-  const cleanedComics = character.data.results.map(comic => {
+export const cleanComicData = comics => {
+  const cleanedComics = comics.data.results.map(comic => {
     const {
       characters,
       description,

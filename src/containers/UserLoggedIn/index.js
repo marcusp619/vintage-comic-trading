@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
-const UserLoggedIn = () => {
+export const UserLoggedIn = () => {
   return <h1>UserLoggedIn</h1>;
 };
 

@@ -1,44 +1,7 @@
-import { fetchComics } from "../fetchComic";
-import { isLoading, hasErrored, comicFetchDataSuccess } from "../../actions";
-import { dispatch } from "rxjs/internal/observable/pairs";
-import { cleanComicData } from "../../utils/DataCleaners";
+import { cleanComicData } from "./DataCleaners";
 
-describe("fetchComic", () => {
-  let mockDispatch;
-  let mockComic;
-
-  beforeEach(() => {
-    mockDispatch = jest.fn();
-    mockComic = {
-      data: {
-        results: {
-          id: 1009718,
-          name: "Wolverine",
-          description:
-            "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
-        }
-      }
-    };
-  });
-
-  it("should dispatch hasErrored(true)", async () => {
-    window.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: false
-      })
-    );
-    const thunk = fetchComics();
-    await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
-  });
-
-  it("should dispatch comicFetchDataSuccess when response is ok", async () => {
-    window.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        json: Promise.resolve(mockData)
-      })
-    );
+describe("cleanComicData", () => {
+  it("should return comic data in the expected format", async () => {
     const mockData = {
       data: {
         results: [
@@ -98,13 +61,8 @@ describe("fetchComic", () => {
       }
     ];
 
-    const thunk = fetchComics();
+    const result = await cleanComicData(mockData);
 
-    await thunk(mockDispatch);
-
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
-    await expect(cleanComicData(mockData)).toEqual(expected);
-    await cleanComicData(mockData);
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
+    expect(result).toEqual(expected);
   });
 });

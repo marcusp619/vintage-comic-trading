@@ -1,16 +1,30 @@
 import React from "react";
-import ReactDOM from "react-dom";
+
 import { shallow, mount } from "enzyme";
 
-import { App, mapStateToProps, mapDispatchToProps } from "./App";
-import { fetchComics } from "../../thunks/fetchComic";
+import { ComicListing, mapStateToProps, mapDispatchToProps } from "./";
 
-describe("App Container", () => {
-  it("should match snapshot", () => {
-    //setup
-    const wrapper = shallow(<App />);
+describe("Hero", () => {
+  let mockArray;
+  beforeAll(() => {
+    mockArray = [
+      {
+        id: 1009718,
+        name: "Wolverine",
+        description:
+          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+      },
+      {
+        id: 1009718,
+        name: "Wolverine",
+        description:
+          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+      }
+    ];
+  });
 
-    //expectation
+  it("ComicListing should match snapshot", () => {
+    const wrapper = shallow(<ComicListing comics={mockArray} />);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -26,6 +40,7 @@ describe("App Container", () => {
               "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
           }
         ],
+        user: { name: "mark", comics: [] },
         isLoading: undefined,
         hasErrored: undefined
       };
@@ -38,6 +53,7 @@ describe("App Container", () => {
               "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
           }
         ],
+        user: { name: "mark", comics: [] },
         isLoading: undefined,
         hasErrored: undefined
       };
@@ -47,21 +63,6 @@ describe("App Container", () => {
 
       //expectation
       expect(mappedProps).toEqual(expected);
-    });
-  });
-
-  describe("mapDispatchToProps", () => {
-    it("calls dispatch with an fetchComics action when fetchCharacterData is called", () => {
-      //setup
-      const mockDispatch = jest.fn();
-      const actionToDispatch = fetchComics();
-
-      //execution
-      const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.fetchComics();
-
-      //expectation
-      expect(mockDispatch).toHaveBeenCalled();
     });
   });
 });
