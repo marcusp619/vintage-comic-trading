@@ -1,7 +1,7 @@
-import { fetchCharacterData } from "../fetchComic";
+import { fetchComics } from "../fetchComic";
 import { isLoading, hasErrored, comicFetchDataSuccess } from "../../actions";
 
-describe("fetchCharacterData", () => {
+describe("fetchComic", () => {
   let mockDispatch;
   let mockComic;
 
@@ -19,23 +19,6 @@ describe("fetchCharacterData", () => {
     };
   });
 
-  it("calls dispatch wtih the isLoading action", () => {
-    const thunk = fetchCharacterData();
-    thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
-  });
-
-  it("should dispatch hasErrored(true) if the response is not ok", async () => {
-    window.fetch = jest.fn().mockImplementation(() =>
-      Promise.resolve({
-        ok: false
-      })
-    );
-    const thunk = fetchCharacterData();
-    await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
-  });
-
   it.skip("should dispatch comicFetchDataSuccess if the response is ok", async () => {
     window.fetch = jest.fn(() =>
       Promise.resolve({
@@ -43,7 +26,7 @@ describe("fetchCharacterData", () => {
         json: () => Promise.resolve(mockComic)
       })
     );
-    const thunk = fetchCharacterData();
+    const thunk = fetchComics();
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(
       comicFetchDataSuccess(mockComic.data.results)

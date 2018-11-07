@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { fetchComics } from "../../thunks/fetchComic";
 import Router from "../../utils/Router";
+
 export class App extends Component {
   async componentDidMount() {
     try {

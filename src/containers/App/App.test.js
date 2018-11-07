@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { shallow, mount } from "enzyme";
 
 import { App, mapStateToProps, mapDispatchToProps } from "./App";
-import { fetchCharacterData } from "../../thunks/fetchComic";
+import { fetchComics } from "../../thunks/fetchComic";
 
 describe("App Container", () => {
   it("should match snapshot", () => {
@@ -51,17 +51,17 @@ describe("App Container", () => {
   });
 
   describe("mapDispatchToProps", () => {
-    it.skip("calls dispatch with an fetchCharacterData action when fetchCharacterData is called", () => {
+    it("calls dispatch with an fetchComics action when fetchCharacterData is called", () => {
       //setup
       const mockDispatch = jest.fn();
-      const actionToDispatch = fetchCharacterData();
+      const actionToDispatch = fetchComics();
 
       //execution
       const mappedProps = mapDispatchToProps(mockDispatch);
-      mappedProps.fetchCharacterData();
+      mappedProps.fetchComics();
 
       //expectation
-      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+      expect(mockDispatch).toHaveBeenCalled();
     });
   });
 });
