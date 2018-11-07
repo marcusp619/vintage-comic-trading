@@ -44,7 +44,7 @@ ShallowWrapper {
             <ForwardRef
               to="/Browse"
             >
-              Browse
+              Shop
             </ForwardRef>
           </ForwardRef>
         </nav>,
@@ -149,7 +149,7 @@ ShallowWrapper {
               <ForwardRef
                 to="/Browse"
               >
-                Browse
+                Shop
               </ForwardRef>
             </ForwardRef>,
           ],
@@ -328,7 +328,7 @@ ShallowWrapper {
               "children": <ForwardRef
                 to="/Browse"
               >
-                Browse
+                Shop
               </ForwardRef>,
             },
             "ref": null,
@@ -337,11 +337,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": "Browse",
+                "children": "Shop",
                 "to": "/Browse",
               },
               "ref": null,
-              "rendered": "Browse",
+              "rendered": "Shop",
               "type": Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": undefined,
@@ -468,7 +468,7 @@ ShallowWrapper {
               <ForwardRef
                 to="/Browse"
               >
-                Browse
+                Shop
               </ForwardRef>
             </ForwardRef>
           </nav>,
@@ -573,7 +573,7 @@ ShallowWrapper {
                 <ForwardRef
                   to="/Browse"
                 >
-                  Browse
+                  Shop
                 </ForwardRef>
               </ForwardRef>,
             ],
@@ -752,7 +752,7 @@ ShallowWrapper {
                 "children": <ForwardRef
                   to="/Browse"
                 >
-                  Browse
+                  Shop
                 </ForwardRef>,
               },
               "ref": null,
@@ -761,11 +761,11 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": "Browse",
+                  "children": "Shop",
                   "to": "/Browse",
                 },
                 "ref": null,
-                "rendered": "Browse",
+                "rendered": "Shop",
                 "type": Object {
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": undefined,

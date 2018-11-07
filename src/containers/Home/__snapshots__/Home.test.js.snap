@@ -52,54 +52,60 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <ForwardRef>
-            Your Comics
-          </ForwardRef>,
+          "children": Array [
+            <ForwardRef>
+              Your Comics
+            </ForwardRef>,
+            undefined,
+          ],
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "Your Comics",
-          },
-          "ref": null,
-          "rendered": "Your Comics",
-          "type": Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "attrs": undefined,
-            "componentStyle": ComponentStyle {
-              "componentId": "sc-iwsKbI",
-              "isStatic": true,
-              "rules": Array [
-                "
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Your Comics",
+            },
+            "ref": null,
+            "rendered": "Your Comics",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": undefined,
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-jTzLTM",
+                "isStatic": true,
+                "rules": Array [
+                  "
   color: #af7a6d;
   margin-top: 2em;
   text-align: center;
 ",
-              ],
+                ],
+              },
+              "displayName": "styled.h2",
+              "render": [Function],
+              "styledComponentId": "sc-jTzLTM",
+              "target": "h2",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
             },
-            "displayName": "styled.h2",
-            "render": [Function],
-            "styledComponentId": "sc-iwsKbI",
-            "target": "h2",
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
           },
-        },
+          undefined,
+        ],
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "attrs": undefined,
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-VigVT",
             "isStatic": true,
             "rules": Array [],
           },
           "displayName": "styled.section",
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-VigVT",
           "target": "section",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -111,7 +117,7 @@ ShallowWrapper {
       "$$typeof": Symbol(react.forward_ref),
       "attrs": undefined,
       "componentStyle": ComponentStyle {
-        "componentId": "sc-htoDjs",
+        "componentId": "sc-gqjmRU",
         "isStatic": true,
         "rules": Array [
           "
@@ -121,7 +127,7 @@ ShallowWrapper {
       },
       "displayName": "styled.div",
       "render": [Function],
-      "styledComponentId": "sc-htoDjs",
+      "styledComponentId": "sc-gqjmRU",
       "target": "div",
       "toString": [Function],
       "warnTooManyClasses": [Function],
@@ -169,54 +175,60 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <ForwardRef>
-              Your Comics
-            </ForwardRef>,
+            "children": Array [
+              <ForwardRef>
+                Your Comics
+              </ForwardRef>,
+              undefined,
+            ],
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": "Your Comics",
-            },
-            "ref": null,
-            "rendered": "Your Comics",
-            "type": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": undefined,
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-iwsKbI",
-                "isStatic": true,
-                "rules": Array [
-                  "
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Your Comics",
+              },
+              "ref": null,
+              "rendered": "Your Comics",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": undefined,
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-jTzLTM",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
   color: #af7a6d;
   margin-top: 2em;
   text-align: center;
 ",
-                ],
+                  ],
+                },
+                "displayName": "styled.h2",
+                "render": [Function],
+                "styledComponentId": "sc-jTzLTM",
+                "target": "h2",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
               },
-              "displayName": "styled.h2",
-              "render": [Function],
-              "styledComponentId": "sc-iwsKbI",
-              "target": "h2",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
             },
-          },
+            undefined,
+          ],
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "attrs": undefined,
             "componentStyle": ComponentStyle {
-              "componentId": "sc-dnqmqq",
+              "componentId": "sc-VigVT",
               "isStatic": true,
               "rules": Array [],
             },
             "displayName": "styled.section",
             "render": [Function],
-            "styledComponentId": "sc-dnqmqq",
+            "styledComponentId": "sc-VigVT",
             "target": "section",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -228,7 +240,7 @@ ShallowWrapper {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": undefined,
         "componentStyle": ComponentStyle {
-          "componentId": "sc-htoDjs",
+          "componentId": "sc-gqjmRU",
           "isStatic": true,
           "rules": Array [
             "
@@ -238,7 +250,7 @@ ShallowWrapper {
         },
         "displayName": "styled.div",
         "render": [Function],
-        "styledComponentId": "sc-htoDjs",
+        "styledComponentId": "sc-gqjmRU",
         "target": "div",
         "toString": [Function],
         "warnTooManyClasses": [Function],

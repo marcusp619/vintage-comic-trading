@@ -107,7 +107,10 @@ describe("ComicListItem", () => {
     const wrapper = shallow(
       <ComicListItem addComicToUser={mockAddComicToUser} comic={mockArray} />
     );
-    wrapper.find(ComicCard).simulate("click");
+    wrapper
+      .find(ComicCard)
+      .at(0)
+      .simulate("click");
     expect(mockAddComic).toHaveBeenCalled();
   });
 });
