@@ -5,7 +5,9 @@ This project was created working with the [The Marvel Developer API](https://dev
 
 ## Getting Started
 `git clone`
+
 `npm install`
+
 `npm start`
 
 ## Testing
