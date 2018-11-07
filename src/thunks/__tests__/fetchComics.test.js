@@ -19,17 +19,14 @@ describe("fetchComic", () => {
     };
   });
 
-  it.skip("should dispatch comicFetchDataSuccess if the response is ok", async () => {
+  it("should dispatch hasErrored(true)", async () => {
     window.fetch = jest.fn(() =>
       Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve(mockComic)
+        ok: false
       })
     );
     const thunk = fetchComics();
     await thunk(mockDispatch);
-    expect(mockDispatch).toHaveBeenCalledWith(
-      comicFetchDataSuccess(mockComic.data.results)
-    );
+    expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
   });
 });
