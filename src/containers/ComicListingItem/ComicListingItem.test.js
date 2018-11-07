@@ -1,10 +1,10 @@
 import React from "react";
 
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
-import { ComicListingItem } from "./index";
+import { ComicListItem, mockStateToProps, mockDispatchToProps } from "./index";
 
-describe("ComicListingItem", () => {
+describe("ComicListItem", () => {
   let mockArray;
   beforeAll(() => {
     mockArray = [
@@ -24,7 +24,17 @@ describe("ComicListingItem", () => {
   });
 
   it("ComicListingItem should match snapshot", () => {
-    const wrapper = shallow(<ComicListingItem comics={mockArray} />);
+    const wrapper = shallow(<ComicListItem comic={mockArray} />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it("should toggle displayComicData state", () => {
+    const expectedState = {
+      displayComicData: true
+    };
+    const wrapper = shallow(<ComicListItem comic={mockArray} />);
+    wrapper.instance().toggleHoverState();
+
+    expect(wrapper.state()).toEqual(expectedState);
   });
 });

@@ -6,7 +6,7 @@ import { Header } from "../Header";
 
 export const ComicListing = props => {
   const ComicItems = props.comics.map((comic, index) => {
-    return <ComicListingItem comic={comic} />;
+    return <ComicListingItem comic={comic} key={Date.now()} />;
   });
 
   return (

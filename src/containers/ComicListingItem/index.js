@@ -16,9 +16,6 @@ export class ComicListItem extends Component {
   };
 
   addComic = comic => {
-    console.log(comic);
-    console.log(this.props.user.username);
-    console.log(this.props.user.comics);
     this.props.addComicToUser(comic);
   };
   render() {
