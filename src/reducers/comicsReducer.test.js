@@ -135,5 +135,25 @@ describe("comics reducer", () => {
       //expectation
       expect(result).toEqual(expected);
     });
+
+    it("should return state with new user", () => {
+      //setup
+      const expected = {
+        comics: [],
+        name: { name: "Mark", comics: [] }
+      };
+
+      const mockAction = {
+        type: "USER_SIGNED_IN",
+        comics: [],
+        user: { name: "Mark", comics: [] }
+      };
+
+      //execution
+      const result = user(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
   });
 });
