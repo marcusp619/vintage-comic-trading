@@ -36,7 +36,7 @@ describe("fetchCharacterData", () => {
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
   });
 
-  it("should dispatch comicFetchDataSuccess if the response is ok", async () => {
+  it.skip("should dispatch comicFetchDataSuccess if the response is ok", async () => {
     window.fetch = jest.fn(() =>
       Promise.resolve({
         ok: true,

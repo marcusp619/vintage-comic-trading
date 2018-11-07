@@ -53,4 +53,19 @@ describe("actions", () => {
     //expectation
     expect(result).toEqual(expectedAction);
   });
+
+  it("should have a type of USER_COMIC_TO_USER", () => {
+    const user = {
+      name: "mark"
+    };
+
+    const expectedAction = {
+      type: "USER_SIGNED_IN",
+      user
+    };
+
+    const result = actions.userSignedIn(user);
+
+    expect(result).toEqual(expectedAction);
+  });
 });
