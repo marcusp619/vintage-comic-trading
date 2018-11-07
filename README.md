@@ -14,8 +14,8 @@ This project was created working with the [The Marvel Developer API](https://dev
 [Jest](https://github.com/facebook/jest)
 
 ## Wireframes 
-![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/Login-Screen.png)
-![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/Movies.png?raw=true)
-![Alt text](https://github.com/marcusp619/movietracker-frontend/blob/iteration-2-DC/Wireframes/New-User-Sign-Up-Screen.png?raw=true)
+![Alt text](https://github.com/marcusp619/vintage-comic-trading/blob/master/src/utils/Assets/Screen%20Shot%202018-11-07%20at%204.23.09%20AM.png?raw=true)
 
 ## Desktop View
+![Desktop](https://github.com/marcusp619/vintage-comic-trading/blob/master/src/utils/Assets/Screen%20Shot%202018-11-07%20at%204.13.25%20AM.png?raw=true)
+![Desktop](https://github.com/marcusp619/vintage-comic-trading/blob/master/src/utils/Assets/Screen%20Shot%202018-11-07%20at%204.13.38%20AM.png?raw=true)
