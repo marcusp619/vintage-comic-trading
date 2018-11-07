@@ -33,7 +33,7 @@ export class Header extends Component {
             <StyledLink to="/About">About</StyledLink>
           </Button>
           <Button>
-            <StyledLink to="/Browse">Browse</StyledLink>
+            <StyledLink to="/Browse">Shop</StyledLink>
           </Button>
         </nav>
         {this.state.isVisible && (

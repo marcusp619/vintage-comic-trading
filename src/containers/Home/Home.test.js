@@ -1,10 +1,9 @@
 import React from "react";
 
 import { shallow } from "enzyme";
+import { Home } from "./index";
 
-import { UserLoggedIn } from "./";
-
-describe("UserLoggedIn", () => {
+describe("Home", () => {
   let mockArray;
   beforeAll(() => {
     mockArray = [
@@ -22,13 +21,8 @@ describe("UserLoggedIn", () => {
       }
     ];
   });
-  it("UserLoggedIn should match snapshot", () => {
-    const wrapper = shallow(
-      <UserLoggedIn
-        comics={mockArray}
-        user={{ name: "mark", comics: mockArray }}
-      />
-    );
+  it("Hero should match snapshot", () => {
+    const wrapper = shallow(<Home />);
     expect(wrapper).toMatchSnapshot();
   });
 });
