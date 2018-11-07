@@ -7,15 +7,6 @@ export const comics = (state = [], action) => {
   }
 };
 
-export const character = (state = "", action) => {
-  switch (action.type) {
-    case "CHARACTER_FETCH_DATA_SUCCESS":
-      return action.character;
-    default:
-      return state;
-  }
-};
-
 export const isLoading = (state = false, action) => {
   switch (action.type) {
     case "IS_LOADING":

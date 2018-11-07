@@ -1,5 +1,6 @@
 import { fetchComics } from "../fetchComic";
 import { isLoading, hasErrored, comicFetchDataSuccess } from "../../actions";
+import { dispatch } from "rxjs/internal/observable/pairs";
 
 describe("fetchComic", () => {
   let mockDispatch;
@@ -28,5 +29,20 @@ describe("fetchComic", () => {
     const thunk = fetchComics();
     await thunk(mockDispatch);
     expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true));
+  });
+
+  it("should dispatch comicFetchDataSuccess when response is ok", async () => {
+    window.fetch = jest.fn(() =>
+      Promise.resolve({
+        ok: true
+      })
+    );
+
+    const thunk = fetchComics();
+
+    await thunk(mockDispatch);
+
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true));
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   });
 });
