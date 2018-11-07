@@ -1,10 +1,11 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import {
   UserForm,
   mapStateToProps,
   mapDispatchToProps,
-  Input
+  Input,
+  Form
 } from "./index.js";
 import { userSignedIn } from "../../actions";
 
@@ -26,6 +27,30 @@ describe("UserForm Container", () => {
     });
 
     expect(wrapper.state()).toEqual({ user: "Mark" });
+  });
+
+  describe("handleFormSubmit function", () => {
+    let mockForm;
+    let wrapper;
+    let mockGetUser;
+    let mockToggleSignInForm;
+    beforeEach(() => {
+      mockGetUser = jest.fn();
+      mockToggleSignInForm = jest.fn();
+      wrapper = shallow(
+        <UserForm
+          getUser={mockGetUser}
+          toggleSignInForm={mockToggleSignInForm}
+        />
+      );
+      mockForm = wrapper.find(Form);
+    });
+
+    it("should call handleFormSubmit with the correct params", () => {
+      mockForm.simulate("submit", { preventDefault() {} });
+      expect(mockGetUser).toHaveBeenCalled();
+      expect(mockToggleSignInForm).toHaveBeenCalled();
+    });
   });
 
   describe("mapstateToProps", () => {

@@ -54,7 +54,7 @@ export default connect(
   mapDispatchToProps
 )(UserForm);
 
-const Form = styled.form`
+export const Form = styled.form`
   background: rgba(226, 212, 186, 0.8);
   color: #af7a6d;
   display: grid;
