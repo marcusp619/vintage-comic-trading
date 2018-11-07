@@ -1,6 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import { shallow, mount } from "enzyme";
+import { shallow } from "enzyme";
 
 import { App, mapStateToProps, mapDispatchToProps } from "./App";
 import { fetchComics } from "../../thunks/fetchComic";
@@ -54,7 +53,6 @@ describe("App Container", () => {
     it("calls dispatch with an fetchComics action when fetchCharacterData is called", () => {
       //setup
       const mockDispatch = jest.fn();
-      const actionToDispatch = fetchComics();
 
       //execution
       const mappedProps = mapDispatchToProps(mockDispatch);
