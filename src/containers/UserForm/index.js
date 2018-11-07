@@ -70,7 +70,7 @@ const Form = styled.form`
   z-index: 2;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   display: block;
   width: 500px;
   height: 2em;
