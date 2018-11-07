@@ -1,4 +1,4 @@
-import { comics, isLoading, hasErrored } from "./comics-reducers";
+import { comics, isLoading, hasErrored, user } from "./comics-reducers";
 
 describe("comics reducer", () => {
   it("should return the initial state", () => {
@@ -118,6 +118,19 @@ describe("comics reducer", () => {
 
       //execution
       const result = hasErrored(undefined, mockAction);
+
+      //expectation
+      expect(result).toEqual(expected);
+    });
+  });
+
+  describe("user reducer", () => {
+    it("should return initial state of '' ", () => {
+      //setup
+      const expected = "";
+
+      //execution
+      const result = user(undefined, "");
 
       //expectation
       expect(result).toEqual(expected);

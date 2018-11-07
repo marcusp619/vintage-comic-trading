@@ -26,7 +26,6 @@ export const hasErrored = (state = false, action) => {
 };
 
 export const user = (state = "", action) => {
-  console.log(state.name);
   switch (action.type) {
     case "USER_SIGNED_IN":
       return { name: action.user, comics: [] };
