@@ -155,5 +155,34 @@ describe("comics reducer", () => {
       //expectation
       expect(result).toEqual(expected);
     });
+
+    it.skip("should return state with user and added comic", () => {
+      //setup
+      const mockComic = {
+        id: 1009718,
+        name: "Wolverine",
+        description:
+          "Born with super-human senses and the power to heal from almost any wound, Wolverine was captured by a secret Canadian organization and given an unbreakable skeleton and claws. Treated like an animal, it took years for him to control himself. Now, he's a premiere member of both the X-Men and the Avengers."
+      };
+      const mockState = {
+        user: { name: "Mark", comics: [mockComic, mockComic] }
+      };
+
+      const expected = {
+        comics: [],
+        name: { name: "Mark", comics: [mockComic] }
+      };
+
+      const mockAction = {
+        type: "ADD_COMIC_TO_USER",
+        comics: [],
+        user: { name: "Mark", comics: [mockComic, mockComic] }
+      };
+
+      //execution
+      const result = user(undefined, mockAction);
+      //expectation
+      expect(result).toEqual(expected);
+    });
   });
 });

@@ -22,7 +22,7 @@ export class Header extends Component {
       <HeaderContainer>
         <SignInContainer>
           <Button onClick={this.toggleSignInForm}>
-            {isLoggedIn ? this.props.user.username : "Sign In"}
+            {isLoggedIn ? this.props.user.name : "Sign In"}
           </Button>
         </SignInContainer>
         <nav>

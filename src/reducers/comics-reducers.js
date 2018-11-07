@@ -32,7 +32,7 @@ export const user = (state = "", action) => {
     case "ADD_COMIC_TO_USER":
       return {
         name: state.name,
-        comics: [...state.comics, action.comic]
+        comics: [action.comic, ...state.comics]
       };
     default:
       return state;
